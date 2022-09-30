@@ -1,5 +1,4 @@
-import sqlite3 #------REVISAR ESTO-------
-#from pysqlcipher3 import dbapi2 as sqlite3
+import sqlite3
 from . import dbc
 
 import click
