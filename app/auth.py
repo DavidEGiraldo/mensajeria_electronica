@@ -96,7 +96,7 @@ def register():
             salt = hex(random.getrandbits(128))[2:]
             hashP = generate_password_hash(password + salt)
             number = hex(random.getrandbits(512))[2:]
-            #------ACTIVATION LINK
+            
             db.execute(
                 'INSERT INTO activationlink (challenge, state, username, password, salt, email) VALUES (?, ?, ?, ?, ?, ?)',
                 (number, utils.U_UNCONFIRMED, username, hashP, salt, email)
