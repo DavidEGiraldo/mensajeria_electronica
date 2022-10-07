@@ -13,8 +13,6 @@ def get_db():
         )
         g.db.row_factory = sqlite3.Row 
      
-    command = 'pragma key="{}"'.format(dbc.DBP)    
-    g.db.execute(command)
     return g.db
 
 
